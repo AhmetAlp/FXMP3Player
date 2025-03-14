@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="563.0" prefWidth="537.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fxmp3player.MusicPlayerController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Simple Music Player">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Label>
+
+    <Label fx:id="chooseMusic" onMouseClicked="#onChooseMusic" text="Choose your music">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+   <Slider fx:id="musicSlider" prefWidth="372.0">
+       <showTickLabels>false</showTickLabels>
+       <showTickMarks>false</showTickMarks>
+   </Slider>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+      <children>
+          <Button onAction="#onPlayClick" text="Play">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onPauseClick" text="Pause">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#onStopClick" text="Stop">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+    <ScrollPane fx:id="sp" prefHeight="400" fitToHeight="true" fitToWidth="true">
+    </ScrollPane>
+
+</VBox>
